@@ -10,13 +10,27 @@ namespace OopLab2._2
     {
         private static int cntStudentId = 1;
         private IList<IExamResult> results;
-        public Group Group { get; set; }
+        public bool HasGroup { get; private set; }
+        private Group group;
+        public Group Group
+        {
+            get
+            {
+                return group;
+            }
+            set
+            {                
+                group = value;
+                HasGroup = true;
+            }
+        }
 
         public Student(string lastName, string firstName) : base(lastName, firstName)
         {
             Id = cntStudentId;
             cntStudentId++;
             results = new List<IExamResult>();
+            HasGroup = false;
         }
 
         public void AddExamResult(ExamResult examResult)

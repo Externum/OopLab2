@@ -23,8 +23,15 @@ namespace OopLab2._2
 
         public void AddStudent(Student student)
         {
-            studentsList.Add(student);
-            student.Group = this;
+            if (student.HasGroup)
+            {
+                Console.WriteLine("Студент уже числится в другой группе");
+            }
+            else
+            {
+                studentsList.Add(student);
+                student.Group = this;
+            }
         }
 
         public void RemoveStudent(Student student)
