@@ -21,7 +21,7 @@ namespace OopLab2._2
             ExamResult exResult1 = new ExamResult(student1, exam1, true);
             Console.WriteLine(exam1);
             Console.WriteLine(exResult1);
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
