@@ -22,30 +22,65 @@ namespace OopLab2._2
 
         public void AddStudentGroup(Group group)
         {
-            studentGroups.Add(group);
+            if (studentGroups.Contains(group))
+            {
+                Console.WriteLine(this + " уже преподает в группе " + group);
+            }
+            else
+            {
+                studentGroups.Add(group);
+            }
         }
 
         public void RemoveStudentGroup(Group group)
         {
-            studentGroups.Remove(group);
+            if (studentGroups.Contains(group))
+            {
+                studentGroups.Remove(group);
+            }
+            else
+            {
+                Console.WriteLine("Группа " + group + " не числится у преподавателя " + this);
+            }
         }
 
         public void ShowStudentsGroups()
         {
-            foreach(Group group in studentGroups)
+            if (studentGroups.Count == 0)
             {
-                Console.WriteLine(group);
+                Console.WriteLine("У перподавателя " + this + " нет студенческих групп");
+            }
+            else
+            {
+                foreach (Group group in studentGroups)
+                {
+                    Console.WriteLine(group);
+                }
             }
         }
 
         public void AddSubject(Subject subject)
         {
-            subjects.Add(subject);
+            if (subjects.Contains(subject))
+            {
+                Console.WriteLine("Преподаватель " + this + " уже ведет предмет " + subject);
+            }
+            else
+            {
+                subjects.Add(subject);
+            }
         }
 
         public void RemoveSubject(Subject subject)
         {
-            subjects.Remove(subject);
+            if (subjects.Contains(subject))
+            {
+                subjects.Remove(subject);
+            }
+            else
+            {
+                Console.WriteLine("Преподаватель " + this + " не ведет предмет " + subject);
+            }
         }
 
         public bool ContainsSubject(Subject subject)
@@ -55,9 +90,16 @@ namespace OopLab2._2
         
         public void ShowSubjects()
         {
-            foreach(Subject subject in subjects)
+            if (subjects.Count == 0)
             {
-                Console.WriteLine(subject);
+                Console.WriteLine("Преподаватель " + this + " не ведет никаких предметов");
+            }
+            else
+            {
+                foreach (Subject subject in subjects)
+                {
+                    Console.WriteLine(subject);
+                }
             }
         }
     }
