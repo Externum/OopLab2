@@ -40,9 +40,16 @@ namespace OopLab2._2
 
         public void ShowExamResults()
         {
-            foreach(ExamResult result in results)
+            if (results.Count == 0)
             {
-                Console.WriteLine(result);
+                Console.WriteLine("Студент " + this + " еще не сдавал экзамены");
+            }
+            else
+            {
+                foreach (ExamResult result in results)
+                {
+                    Console.WriteLine(result);
+                }
             }
         }
     }

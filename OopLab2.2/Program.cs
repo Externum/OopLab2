@@ -21,6 +21,10 @@ namespace OopLab2._2
             ExamResult exResult1 = new ExamResult(student1, exam1, true);
             Console.WriteLine(exam1);
             Console.WriteLine(exResult1);
+            Group group2 = new Group("М45");
+            group2.AddStudent(student1);
+            Student student2 = new Student("Попов", "Егор");
+            student2.ShowExamResults();
             Console.ReadLine();
         }
     }
