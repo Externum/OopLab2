@@ -9,7 +9,7 @@ namespace OopLab2._2
     class Subject : ISubject
     {
         public string Name { get; set; }
-        private List<ITeacher> teachers;
+        private IList<ITeacher> teachers;
 
         public Subject(string name)
         {
@@ -19,21 +19,41 @@ namespace OopLab2._2
 
         public void AddTeacher(Teacher teacher)
         {
-            teachers.Add(teacher);
-            teacher.AddSubject(this);
+            if (teachers.Contains(teacher))
+            {
+                Console.WriteLine("Учитель " + teacher + " уже ведет предмет " + this);
+            }
+            else
+            {
+                teachers.Add(teacher);
+                teacher.AddSubject(this);
+            }
         }
 
         public void RemoveTeacher(Teacher teacher)
         {
-            teachers.Remove(teacher);
-            teacher.RemoveSubject(this);
+            if (teachers.Contains(teacher))
+            {
+                teachers.Remove(teacher);
+                teacher.RemoveSubject(this);
+            }
+            else
+            {
+                Console.WriteLine("Учитель " + teacher + " не ведет предмет " + this);
+            }
         }
 
         public void ShowTeachers()
         {
-            foreach(Teacher teacher in teachers)
+            if(teachers.Count == 0)
             {
-                Console.WriteLine(teacher);
+                Console.WriteLine("Этот предмет никто не ведет");
+            }
+            {
+                foreach (Teacher teacher in teachers)
+                {
+                    Console.WriteLine(teacher);
+                }
             }
         }
 
