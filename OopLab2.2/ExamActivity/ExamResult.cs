@@ -31,11 +31,11 @@ namespace OopLab2._2
         {
             if (Result)
             {
-                return string.Format("Студент " + Student + " экзамен " + Exam.Id + " сдал");
+                return string.Format("Студент " + Student + " экзамен ID " + Exam.Id + " сдал");
             }
             else
             {
-                return string.Format("Студент " + Student + " экзамен " + Exam.Id + " не сдал");
+                return string.Format("Студент " + Student + " экзамен ID " + Exam.Id + " не сдал");
             }
         }
     }

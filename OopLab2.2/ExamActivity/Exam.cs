@@ -37,7 +37,7 @@ namespace OopLab2._2
 
         public override string ToString()
         {
-            return string.Format("Экзамен " + Id + " для группы " + Group + ", принимает " + Teacher + ", предмет " + Subject);
+            return string.Format("Экзамен ID " + Id + " для группы " + Group + ", принимает " + Teacher + ", предмет " + Subject);
         }
     }
 }
