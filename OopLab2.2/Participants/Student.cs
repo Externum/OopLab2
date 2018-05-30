@@ -19,9 +19,17 @@ namespace OopLab2._2
                 return group;
             }
             set
-            {                
-                group = value;
-                HasGroup = true;
+            {
+                if (value == null)
+                {
+                    group = value;
+                    HasGroup = false;
+                }
+                else
+                {
+                    group = value;
+                    HasGroup = true;
+                }
             }
         }
 

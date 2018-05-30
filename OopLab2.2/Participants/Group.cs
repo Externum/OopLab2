@@ -36,32 +36,68 @@ namespace OopLab2._2
 
         public void RemoveStudent(Student student)
         {
-            studentsList.Remove(student);
+            if (studentsList.Contains(student))
+            {
+                studentsList.Remove(student);
+                student.Group = null;
+            }
+            else
+            {
+                Console.WriteLine("Студент " + student + "в группе " + this + " не числится");
+            }
         }
 
         public void ShowStudents()
         {
-            foreach(Student student in studentsList)
+            if (studentsList.Count == 0)
             {
-                Console.WriteLine(student);
+                Console.WriteLine("В группе " + this + " нет студентов");
+            }
+            else
+            {
+                foreach (Student student in studentsList)
+                {
+                    Console.WriteLine(student);
+                }
             }
         }
 
         public void AddSubject(Subject subject)
         {
-            subjects.Add(subject);
+            if (subjects.Contains(subject))
+            {
+                Console.WriteLine("Предмет " + subject + " уже назначен группе " + this);
+            }
+            else
+            {
+                subjects.Add(subject);
+            }
         }
 
         public void RemoveSubject(Subject subject)
         {
-            subjects.Remove(subject);
+            if (subjects.Contains(subject))
+            {
+                subjects.Remove(subject);
+            }
+            else
+            {
+                Console.WriteLine("Предмет " + subject + " не назначен группе " + this);
+            }
         }
 
         public void ShowSubjects()
         {
-            foreach(Subject subject in subjects)
+            if (subjects.Count == 0)
             {
-                Console.WriteLine(subject);
+                Console.WriteLine("Группе " + this + "еще не назначены никакие предметы");
+            }
+            else
+            {
+                foreach (Subject subject in subjects)
+                {
+                    Console.WriteLine(subject);
+                }
             }
         }
 
@@ -87,9 +123,16 @@ namespace OopLab2._2
 
         public void ShowExams()
         {
-            foreach(Exam exam in exams)
+            if (exams.Count == 0)
             {
-                Console.WriteLine(exam);
+                Console.WriteLine("Группе " + this + " еще не назначены экзамены");
+            }
+            else
+            {
+                foreach (Exam exam in exams)
+                {
+                    Console.WriteLine(exam);
+                }
             }
         }
 
