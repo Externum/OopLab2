@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-    class Group : IGroup
+    public class Group : IGroup
     {
         private IList<IStudent> studentsList;
         private IList<ISubject> subjects;

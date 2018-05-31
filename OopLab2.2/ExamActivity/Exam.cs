@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-    class Exam : IExam
+    public class Exam : IExam
     {
         private int cntExamId = 1;
         public Group Group { get; set; }

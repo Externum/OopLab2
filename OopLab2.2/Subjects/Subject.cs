@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-    class Subject : ISubject
+    public class Subject : ISubject
     {
         public string Name { get; set; }
         private IList<ITeacher> teachers;

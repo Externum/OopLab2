@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-        class Teacher: Human, ITeacher
+        public class Teacher: Human, ITeacher
         {
             private static int cntTeacherId = 1;
             private IList<IGroup> studentGroups;

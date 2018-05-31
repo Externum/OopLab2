@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-    class Student: Human, IStudent
+    public class Student: Human, IStudent
     {
         private static int cntStudentId = 1;
         private IList<IExamResult> results;
