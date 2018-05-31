@@ -15,10 +15,11 @@ namespace UnitTest1.ParticipantsTests
             Student student1 = new Student("Студент", "Один");
             Student student2 = new Student("Студент", "Два");
             group1.AddStudent(student1);
-            group2.AddStudent(student2);
             group1.AddStudent(student2);
+            group2.AddStudent(student2);
             group1.RemoveStudent(student2);
-            group1.RemoveStudent(student1);
+            Assert.IsTrue(group1.ContainsStudent(student1) && !(group1.ContainsStudent(student2)));
+            Assert.IsTrue(!(group2.ContainsStudent(student2)));
         }
 
         [TestMethod]
@@ -43,6 +44,7 @@ namespace UnitTest1.ParticipantsTests
             group1.AddSubject(subject1);
             group1.RemoveSubject(subject2);
             group1.RemoveSubject(subject1);
+            Assert.IsTrue(!(group1.ContainsSubject(subject1)) && !(group1.ContainsSubject(subject2)));
         }
 
         [TestMethod]
