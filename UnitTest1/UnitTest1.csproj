@@ -50,9 +50,9 @@
   <ItemGroup>
     <Compile Include="ExamActivityTest\ExamTest.cs" />
     <Compile Include="ExamActivityTest\ExamResultTest.cs" />
-    <Compile Include="ParticipantsTests\GroupTest.cs" />
     <Compile Include="ParticipantsTests\StudentTest.cs" />
     <Compile Include="ParticipantsTests\TeacherTest.cs" />
+    <Compile Include="ParticipantsTests\GroupTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubjectsTest\SubjectTest.cs" />
   </ItemGroup>

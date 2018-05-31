@@ -5,11 +5,14 @@ using OopLab2._2;
 namespace UnitTest1.ParticipantsTests
 {
     [TestClass]
-    class TeacherTest
+    public class TeacherTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TeacherAddSubject()
         {
+            Teacher teacher1 = new Teacher("Препод", "Один");
+            Subject subject1 = new Subject("Предмет");
+            teacher1.AddSubject(subject1);
         }
     }
 }

@@ -10,8 +10,8 @@ namespace UnitTest1
         [TestMethod]
         public void ShowResultsTest()
         {
-            Student studnet = new Student("Студентов", "Студентище");
-            studnet.ShowExamResults();
+            Student studnetTest = new Student("Студентов", "Студентище");
+            studnetTest.ShowExamResults();
         }
     }
 }
