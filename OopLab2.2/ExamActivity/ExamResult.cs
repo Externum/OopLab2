@@ -14,17 +14,25 @@ namespace OopLab2._2
 
         public ExamResult(Student student, Exam exam, bool result)
         {
-            if (exam.Group.ContainsStudent(student))
+            try
             {
-                Student = student;
-                Exam = exam;
-                student.AddExamResult(this);
-                Result = result;
+                if (!(exam.Group.ContainsStudent(student)))
+                {
+                    Console.WriteLine("Данному студенту указанный экзамен назначен не был!");
+                }
+                else
+                {
+                    Student = student;
+                    Exam = exam;
+                    student.AddExamResult(this);
+                    Result = result;
+                }
             }
-            else
+            catch (System.NullReferenceException ex)
             {
-                Console.WriteLine("Данному студенту указанный экзамен назначен не был!");
+                Console.WriteLine("Экзамен создан не был, ссылка пустая");
             }
+
         }
 
         public override string ToString()
