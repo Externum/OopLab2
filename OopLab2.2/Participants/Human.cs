@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-    abstract class Human
+    public abstract class Human
     {
         public int Id { get; protected set; }
         public string FirstName { get; set; }
