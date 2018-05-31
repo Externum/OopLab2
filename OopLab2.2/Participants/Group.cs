@@ -62,6 +62,18 @@ namespace OopLab2._2
             }
         }
 
+        public bool NoStudents()
+        {
+            if(studentsList.Count == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void AddSubject(Subject subject)
         {
             if (subjects.Contains(subject))

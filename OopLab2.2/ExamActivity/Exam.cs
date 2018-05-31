@@ -24,6 +24,10 @@ namespace OopLab2._2
             {
                 Console.WriteLine("Группе " + group + "не назначен предмет" + subject);
             }
+            else if(group.NoStudents())
+            {
+                Console.WriteLine("В группе " + group + "не числится ни один студент");
+            }
             else
             {
                 Group = group;
