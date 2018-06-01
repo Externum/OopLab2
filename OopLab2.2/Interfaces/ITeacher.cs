@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-    interface ITeacher
+    public interface ITeacher
     {
         void AddStudentGroup(Group group);
         void RemoveStudentGroup(Group group);

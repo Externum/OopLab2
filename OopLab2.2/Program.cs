@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace OopLab2._2
 {
@@ -26,6 +28,7 @@ namespace OopLab2._2
             Student student2 = new Student("Попов", "Егор");
             student2.ShowExamResults();
             Console.ReadLine();
+
         }
     }
 }

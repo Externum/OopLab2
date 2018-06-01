@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-    interface IStudent
+    public interface IStudent
     {
         Group Group { get; set; }
+        bool HasGroup { get; }
         void AddExamResult(ExamResult examResult);
         void ShowExamResults();
     }

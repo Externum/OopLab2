@@ -25,7 +25,7 @@ namespace OopLab2._2
         {
             if (student.HasGroup)
             {
-                Console.WriteLine("Студент уже числится в другой группе");
+                Console.WriteLine("Студент уже числится в группе" + student.Group);
             }
             else
             {

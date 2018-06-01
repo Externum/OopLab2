@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-    interface ISubject
+    public interface ISubject
     {
         string Name { get; set; }
         void AddTeacher(Teacher teacher);

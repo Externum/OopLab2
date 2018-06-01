@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-    interface IGroup
+    public interface IGroup
     {
         string Code { get; set; }
         void AddStudent(Student student);

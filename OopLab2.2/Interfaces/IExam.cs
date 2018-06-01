@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-    interface IExam
+    public interface IExam
     {
         Group Group { get; set; }
         Teacher Teacher { get; set; }

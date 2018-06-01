@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OopLab2._2
 {
-    interface IExamResult
+    public interface IExamResult
     {
         Student Student { get; set; }
         Exam Exam { get; set; }
