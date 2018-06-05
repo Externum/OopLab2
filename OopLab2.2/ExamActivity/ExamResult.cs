@@ -31,7 +31,7 @@ namespace OopLab2._2
             }
             catch (System.NullReferenceException)
             {
-                throw new System.ArgumentException("Экзамен создан не был, ссылка пустая");
+                throw;
             }
 
         }

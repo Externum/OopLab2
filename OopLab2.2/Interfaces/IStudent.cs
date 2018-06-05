@@ -11,5 +11,7 @@ namespace OopLab2._2
         Group Group { get; set; }
         bool HasGroup { get; }
         void AddExamResult(ExamResult examResult);
+        void RemoveExamResult(ExamResult examResult);
+        bool ContainsExamResult(ExamResult examResult);
     }
 }

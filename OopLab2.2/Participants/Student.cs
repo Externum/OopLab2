@@ -50,6 +50,11 @@ namespace OopLab2._2
                 results.Remove(examResult);
             }
         }
+
+        public bool ContainsExamResult(ExamResult examResult)
+        {
+            return results.Contains(examResult);
+        }
         /*
         public void ShowExamResults()
         {

@@ -45,7 +45,7 @@ namespace OopLab2._2
                 throw new System.ArgumentException("Группа не числится у преподавателя");
             }
         }
-
+        /*
         public void ShowStudentsGroups()
         {
             if (studentGroups.Count == 0)
@@ -60,7 +60,7 @@ namespace OopLab2._2
                 }
             }
         }
-
+        */
         public void AddSubject(Subject subject)
         {
             if (subjects.Contains(subject))
@@ -89,7 +89,7 @@ namespace OopLab2._2
         {
             return subjects.Contains(subject);
         }
-        
+        /*
         public void ShowSubjects()
         {
             if (subjects.Count == 0)
@@ -103,6 +103,12 @@ namespace OopLab2._2
                     Console.WriteLine(subject);
                 }
             }
+        }
+        */
+
+        public bool ContainsGroup(Group group)
+        {
+            return studentGroups.Contains(group);
         }
     }
 }

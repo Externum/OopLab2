@@ -10,10 +10,9 @@ namespace OopLab2._2
     {
         void AddStudentGroup(Group group);
         void RemoveStudentGroup(Group group);
-        void ShowStudentsGroups();
         void AddSubject(Subject subject);
         void RemoveSubject(Subject subject);
         bool ContainsSubject(Subject subject);
-        void ShowSubjects();
+        bool ContainsGroup(Group group);
     }
 }

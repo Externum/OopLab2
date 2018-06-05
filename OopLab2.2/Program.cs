@@ -10,8 +10,11 @@ namespace OopLab2._2
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
+            new MainForm().ShowDialog();
+            /*
             Teacher teacher1 = new Teacher("Петров", "Василий");
             Student student1 = new Student("Иванов", "Фома");
             Group group1 = new Group("ИВТ2");
@@ -29,7 +32,7 @@ namespace OopLab2._2
             Student student2 = new Student("Попов", "Егор");
             student2.ShowExamResults();
             Console.ReadLine();
-
+            */
         }
     }
 }

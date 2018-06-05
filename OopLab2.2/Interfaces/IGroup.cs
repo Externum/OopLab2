@@ -17,6 +17,6 @@ namespace OopLab2._2
         bool ContainsSubject(Subject subject);
         void AddExam(Exam exam);
         void RemoveExam(Exam exam);
-        
+        bool ContainsExam(Exam exam);
     }
 }
