@@ -18,7 +18,8 @@ namespace OopLab2._2
             {
                 if (!(exam.Group.ContainsStudent(student)))
                 {
-                    Console.WriteLine("Данному студенту указанный экзамен назначен не был!");
+                    //Console.WriteLine("Данному студенту указанный экзамен назначен не был!");
+                    throw new System.ArgumentException("Экзамен студенту не назначен");
                 }
                 else
                 {
@@ -28,9 +29,9 @@ namespace OopLab2._2
                     Result = result;
                 }
             }
-            catch (System.NullReferenceException ex)
+            catch (System.NullReferenceException)
             {
-                Console.WriteLine("Экзамен создан не был, ссылка пустая");
+                throw new System.ArgumentException("Экзамен создан не был, ссылка пустая");
             }
 
         }

@@ -24,7 +24,8 @@ namespace OopLab2._2
         {
             if (studentGroups.Contains(group))
             {
-                Console.WriteLine(this + " уже преподает в группе " + group);
+                //Console.WriteLine(this + " уже преподает в группе " + group);
+                throw new System.ArgumentException("Нельзя добавлять группу дважды");
             }
             else
             {
@@ -40,7 +41,8 @@ namespace OopLab2._2
             }
             else
             {
-                Console.WriteLine("Группа " + group + " не числится у преподавателя " + this);
+                //Console.WriteLine("Группа " + group + " не числится у преподавателя " + this);
+                throw new System.ArgumentException("Группа не числится у преподавателя");
             }
         }
 

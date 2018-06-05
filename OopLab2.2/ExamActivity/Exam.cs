@@ -18,15 +18,18 @@ namespace OopLab2._2
         {
             if (!(teacher.ContainsSubject(subject)))
             {
-                Console.WriteLine(teacher + " не ведет предмет " + subject);
+                //Console.WriteLine(teacher + " не ведет предмет " + subject);
+                throw new System.ArgumentException("Преподаватель не ведет указанный предмет");
             }
             else if (!(group.ContainsSubject(subject)))
             {
-                Console.WriteLine("Группе " + group + "не назначен предмет" + subject);
+                //Console.WriteLine("Группе " + group + "не назначен предмет" + subject);
+                throw new System.ArgumentException("Группа не изучает этот предмет");
             }
             else if(group.NoStudents())
             {
-                Console.WriteLine("В группе " + group + "не числится ни один студент");
+                //Console.WriteLine("В группе " + group + "не числится ни один студент");
+                throw new System.ArgumentException("В групее не числятся студенты");
             }
             else
             {

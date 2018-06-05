@@ -16,6 +16,7 @@ namespace OopLab2._2
             Student student1 = new Student("Иванов", "Фома");
             Group group1 = new Group("ИВТ2");
             Subject subject1 = new Subject("Математика");
+            teacher1.AddStudentGroup(group1);
             subject1.AddTeacher(teacher1);
             group1.AddStudent(student1);
             group1.AddSubject(subject1);

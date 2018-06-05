@@ -25,12 +25,13 @@ namespace OopLab2._2
         {
             if (student.HasGroup)
             {
-                Console.WriteLine("Студент уже числится в группе" + student.Group);
+                //Console.WriteLine("Студент уже числится в группе" + student.Group);
+                throw new System.ArgumentException("Студент не может числиться в двух группах");
             }
             else
             {
                 studentsList.Add(student);
-                student.Group = this;
+                //student.Group = this;
             }
         }
 
@@ -39,14 +40,15 @@ namespace OopLab2._2
             if (studentsList.Contains(student))
             {
                 studentsList.Remove(student);
-                student.Group = null;
+                //student.Group = null;
             }
             else
             {
-                Console.WriteLine("Студент " + student + "в группе " + this + " не числится");
+                //Console.WriteLine("Студент " + student + "в группе " + this + " не числится");
+                throw new System.ArgumentException("Студент не числится в этой группе");
             }
         }
-
+        /*
         public void ShowStudents()
         {
             if (studentsList.Count == 0)
@@ -61,7 +63,7 @@ namespace OopLab2._2
                 }
             }
         }
-
+        */
         public bool NoStudents()
         {
             if(studentsList.Count == 0)
@@ -97,7 +99,7 @@ namespace OopLab2._2
                 Console.WriteLine("Предмет " + subject + " не назначен группе " + this);
             }
         }
-
+        /*
         public void ShowSubjects()
         {
             if (subjects.Count == 0)
@@ -112,7 +114,7 @@ namespace OopLab2._2
                 }
             }
         }
-
+        */
         public override string ToString()
         {
             return Code;
@@ -125,14 +127,28 @@ namespace OopLab2._2
 
         public void AddExam(Exam exam)
         {
-            exams.Add(exam);
+            if (exams.Contains(exam))
+            {
+                throw new ArgumentException("Этот экзамен уже назначен группе");
+            }
+            else
+            {
+                exams.Add(exam);
+            }
         }
 
         public void RemoveExam(Exam exam)
         {
-            exams.Remove(exam);
+            if (!(exams.Contains(exam)))
+            {
+                throw new ArgumentException("Этот экзамен не назначен группе");
+            }
+            else
+            {
+                exams.Remove(exam);
+            }
         }
-
+        /*
         public void ShowExams()
         {
             if (exams.Count == 0)
@@ -147,10 +163,15 @@ namespace OopLab2._2
                 }
             }
         }
-
+        */
         public bool ContainsStudent(Student student)
         {
             return studentsList.Contains(student);
+        }
+
+        public bool ContainsExam(Exam exam)
+        {
+            return exams.Contains(exam);
         }
     }
 }

@@ -29,9 +29,28 @@ namespace OopLab2._2
 
         public void AddExamResult(ExamResult examResult)
         {
-            results.Add(examResult);
+            if (results.Contains(examResult))
+            {
+                throw new ArgumentException("Этот результат уже есть");
+            }
+            else
+            {
+                results.Add(examResult);
+            }
         }
 
+        public void RemoveExamResult(ExamResult examResult)
+        {
+            if(!(results.Contains(examResult)))
+            {
+                throw new ArgumentException("Этого результата нет");
+            }
+            else
+            {
+                results.Remove(examResult);
+            }
+        }
+        /*
         public void ShowExamResults()
         {
             if (results.Count == 0)
@@ -46,5 +65,6 @@ namespace OopLab2._2
                 }
             }
         }
+        */
     }
 }
