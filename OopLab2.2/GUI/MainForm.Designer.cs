@@ -52,6 +52,7 @@
             this.TeacherMenuButton.TabIndex = 1;
             this.TeacherMenuButton.Text = "Учитель";
             this.TeacherMenuButton.UseVisualStyleBackColor = true;
+            this.TeacherMenuButton.Click += new System.EventHandler(this.TeacherMenuButton_Click);
             // 
             // GroupMenuButton
             // 
@@ -61,6 +62,7 @@
             this.GroupMenuButton.TabIndex = 2;
             this.GroupMenuButton.Text = "Группа";
             this.GroupMenuButton.UseVisualStyleBackColor = true;
+            this.GroupMenuButton.Click += new System.EventHandler(this.GroupMenuButton_Click);
             // 
             // SubjectMenuButton
             // 
@@ -70,11 +72,11 @@
             this.SubjectMenuButton.TabIndex = 3;
             this.SubjectMenuButton.Text = "Предмет";
             this.SubjectMenuButton.UseVisualStyleBackColor = true;
+            this.SubjectMenuButton.Click += new System.EventHandler(this.SubjectMenuButton_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(416, 225);
             this.Controls.Add(this.SubjectMenuButton);
             this.Controls.Add(this.GroupMenuButton);

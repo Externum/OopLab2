@@ -11,6 +11,5 @@ namespace OopLab2._2
         string Name { get; set; }
         void AddTeacher(Teacher teacher);
         void RemoveTeacher(Teacher teacher);
-        void ShowTeachers();
     }
 }

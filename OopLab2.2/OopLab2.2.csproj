@@ -46,16 +46,22 @@
   <ItemGroup>
     <Compile Include="ExamActivity\ExamResult.cs" />
     <Compile Include="ExamActivity\Exam.cs" />
+    <Compile Include="GUI\GroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GroupForm.Designer.cs">
+      <DependentUpon>GroupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IExamResult.cs" />
     <Compile Include="Interfaces\IExam.cs" />
     <Compile Include="Interfaces\IGroup.cs" />
     <Compile Include="Interfaces\ISubject.cs" />
     <Compile Include="Interfaces\IStudent.cs" />
     <Compile Include="Interfaces\ITeacher.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="GUI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="GUI\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Participants\Group.cs" />
@@ -63,15 +69,45 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Participants\Student.cs" />
+    <Compile Include="GUI\StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SubjectForm.Designer.cs">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Subjects\Subject.cs" />
     <Compile Include="Participants\Teacher.cs" />
+    <Compile Include="GUI\TeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TeacherForm.Designer.cs">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="GUI\GroupForm.resx">
+      <DependentUpon>GroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SubjectForm.resx">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TeacherForm.resx">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

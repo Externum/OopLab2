@@ -21,12 +21,13 @@ namespace OopLab2._2
         {
             if (teachers.Contains(teacher))
             {
-                Console.WriteLine("Учитель " + teacher + " уже ведет предмет " + this);
+                //Console.WriteLine("Учитель " + teacher + " уже ведет предмет " + this);
+                throw new ArgumentException("Уже есть этот предмет");
             }
             else
             {
                 teachers.Add(teacher);
-                teacher.AddSubject(this);
+                //teacher.AddSubject(this);
             }
         }
 
@@ -35,14 +36,15 @@ namespace OopLab2._2
             if (teachers.Contains(teacher))
             {
                 teachers.Remove(teacher);
-                teacher.RemoveSubject(this);
+                //teacher.RemoveSubject(this);
             }
             else
             {
-                Console.WriteLine("Учитель " + teacher + " не ведет предмет " + this);
+                //Console.WriteLine("Учитель " + teacher + " не ведет предмет " + this);
+                throw new ArgumentException("Нет этого предмета");
             }
         }
-
+        /*
         public void ShowTeachers()
         {
             if(teachers.Count == 0)
@@ -56,7 +58,7 @@ namespace OopLab2._2
                 }
             }
         }
-
+        */
         public override string ToString()
         {
             return Name;
